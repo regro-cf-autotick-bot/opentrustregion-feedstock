@@ -21,6 +21,7 @@ cmake ${CMAKE_ARGS} ${ARCH_ARGS} \
   -D CMAKE_INSTALL_LIBDIR=lib \
   -D OpenTrustRegion_INSTALL_CMAKEDIR="lib/cmake/OpenTrustRegion" \
   -D OpenTrustRegion_BUILD_TESTING=ON \
+  -D OpenTrustRegion_INSTALL_TESTING_LIBRARY=ON \
   -D BUILD_SHARED_LIBS=ON \
   -D CMAKE_VERBOSE_MAKEFILE=OFF \
   -D CMAKE_PREFIX_PATH="${PREFIX}"
