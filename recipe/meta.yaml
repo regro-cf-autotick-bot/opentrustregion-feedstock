@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/eriksen-lab/opentrustregion/archive/v{{ version }}.tar.bz2
-  sha256: 0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5
+  url: https://github.com/eriksen-lab/opentrustregion/archive/v{{ version }}.tar.gz
+  sha256: 67809845eeb3b88198bf053b6ac9ff91a21332559d80e5d5167952bc78b1bfd1
   # <sha256-value> = `curl -sL <url-value> | openssl sha256`
 
 build:
