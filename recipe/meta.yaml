@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 {% set PYTHON = PYTHON | default("$PYTHON") %}  # https://github.com/conda/conda-build/issues/5424#issuecomment-2663290268
 
 package:
@@ -6,9 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  # url: https://github.com/eriksen-lab/opentrustregion/archive/v{{ version }}.tar.bz2
+  url: https://github.com/eriksen-lab/opentrustregion/archive/v{{ version }}.tar.bz2
   url: https://github.com/loriab/opentrustregion/archive/cmakeconda.tar.gz
-  sha256: 41e8515f046e3b0e7c37be895b9a89e5bcb208eece16d668f31c9c5a4f216f21
+  sha256: 0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5
+  # <sha256-value> = `curl -sL <url-value> | openssl sha256`
 
 build:
   number: 0
