@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/eriksen-lab/opentrustregion/archive/v{{ version }}.tar.gz
+  patches:
+    - 001-fix-cross-fortran-native-flags.patch
   sha256: 67809845eeb3b88198bf053b6ac9ff91a21332559d80e5d5167952bc78b1bfd1
   # <sha256-value> = `curl -sL <url-value> | openssl sha256`
-  patches:
-    - fix-cross-fortran-native-flags.patch
 
 build:
   number: 0
