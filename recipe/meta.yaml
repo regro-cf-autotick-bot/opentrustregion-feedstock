@@ -22,8 +22,8 @@ outputs:
         - {{ pin_subpackage('opentrustregion', max_pin='x.x') }}
     requirements:
       build:
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - python {{ python_min }}                                # [build_platform != target_platform]
+        - cross-python_{{ target_platform }} {{ python_min }}    # [build_platform != target_platform]
         - {{ stdlib("c") }}                                                          # [unix]
         - {{ compiler("c") }}                                                        # [unix]
         - {{ compiler("fortran") }}                                                  # [unix]
