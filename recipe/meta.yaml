@@ -13,7 +13,7 @@ source:
   # <sha256-value> = `curl -sL <url-value> | openssl sha256`
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: opentrustregion
