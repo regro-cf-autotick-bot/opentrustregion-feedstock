@@ -7,11 +7,13 @@ package:
 
 source:
   url: https://github.com/eriksen-lab/opentrustregion/archive/v{{ version }}.tar.gz
+  patches:
+    - 001-fix-cross-fortran-native-flags.patch
   sha256: 67809845eeb3b88198bf053b6ac9ff91a21332559d80e5d5167952bc78b1bfd1
   # <sha256-value> = `curl -sL <url-value> | openssl sha256`
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: opentrustregion
@@ -22,6 +24,8 @@ outputs:
         - {{ pin_subpackage('opentrustregion', max_pin='x.x') }}
     requirements:
       build:
+        - python {{ python_min }}                                # [build_platform != target_platform]
+        - cross-python_{{ target_platform }} {{ python_min }}    # [build_platform != target_platform]
         - {{ stdlib("c") }}                                                          # [unix]
         - {{ compiler("c") }}                                                        # [unix]
         - {{ compiler("fortran") }}                                                  # [unix]
